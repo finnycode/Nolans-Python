@@ -8,3 +8,15 @@ for language in languages:
     translation = Translator.translate(text)
 
     print(f'{language}: {translation}')
+
+
+#Fixed
+# Nolans-Python
+from translate import Translator
+
+languages = ['fr', 'it', 'es', 'ru', 'zh']
+text = input('What text would you like to Translate? >> ')
+for language in languages:
+    translator = Translator(from_lang='en', to_lang=language)
+    translation = translator.translate(text)
+    print(f'{language}: {translation}')
